@@ -1,35 +1,35 @@
 import * as Font from 'expo-font'
 
 export const fonts = {
-  openSan: {
-    regular: 'openSans_regular',
-    regularItalic: 'openSans_regular_italic',
-    semiBold: 'openSans_semiBold',
-    semiBoldItalic: 'openSans_semiBold_italic',
-    bold: 'openSans_bold',
-    boldItalic: 'openSans_bold_italic',
+  montserrat: {
+    light: 'montserrat_light',
+    regular: 'montserrat_regular',
+    medium: 'montserrat_medium',
+    semiBold: 'montserrat_semiBold',
+    bold: 'montserrat_bold',
+    extraBold: 'montserrat_extraBold',
   },
 }
 
 // fonts preloading
 export const fontsAll = [
   {
-    openSans_regular: require('../../assets/fonts/OpenSans-Regular.ttf'),
+    montserrat_extraBold: require('../../assets/fonts/Montserrat-ExtraBold.ttf'),
   },
   {
-    openSans_regular_italic: require('../../assets/fonts/OpenSans-Italic.ttf'),
+    montserrat_bold: require('../../assets/fonts/Montserrat-Bold.ttf'),
   },
   {
-    openSans_semiBold: require('../../assets/fonts/OpenSans-Semibold.ttf'),
+    montserrat_semiBold: require('../../assets/fonts/Montserrat-SemiBold.ttf'),
   },
   {
-    openSans_semiBold_italic: require('../../assets/fonts/OpenSans-SemiboldItalic.ttf'),
+    montserrat_regular: require('../../assets/fonts/Montserrat-Regular.ttf'),
   },
   {
-    openSans_bold: require('../../assets/fonts/OpenSans-Bold.ttf'),
+    montserrat_medium: require('../../assets/fonts/Montserrat-Medium.ttf'),
   },
   {
-    openSans_bold_italic: require('../../assets/fonts/OpenSans-BoldItalic.ttf'),
+    montserrat_light: require('../../assets/fonts/Montserrat-Light.ttf'),
   },
 ]
 export const fontAssets = fontsAll.map((x) => Font.loadAsync(x))

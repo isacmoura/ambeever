@@ -1,5 +1,11 @@
 const colors = {
-  darkPurple: '#231d54',
+  yellow: '#FFCA41',
+  orange: '#FF8B00',
+  blue: '#012E71',
+  white: '#fff',
+  black: '#000',
+  darkGray: '#18191F',
+  darkPurple: '#d54',
   purple: '#8100ff',
   lightPurple: '#9388db',
   lightGrayPurple: '#f7f7fb',
