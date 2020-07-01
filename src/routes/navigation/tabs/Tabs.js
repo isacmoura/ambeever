@@ -11,11 +11,19 @@ const TabNavigator = createBottomTabNavigator(
   {
     HomeTab: {
       screen: HomeNavigator,
-      navigationOptions: { title: 'Home' },
+      navigationOptions: { title: 'Início' },
+    },
+    games: {
+      screen: HomeNavigator,
+      navigationOptions: { title: 'Jogos' },
+    },
+    orders: {
+      screen: ProfileNavigator,
+      navigationOptions: { title: 'Pedidos' },
     },
     ProfileTab: {
       screen: ProfileNavigator,
-      navigationOptions: { title: 'Profile' },
+      navigationOptions: { title: 'Perfil' },
     },
   },
   {
@@ -28,6 +36,24 @@ const TabNavigator = createBottomTabNavigator(
             return (
               <FontIcon
                 name="home"
+                color={focused ? colors.lightPurple : colors.gray}
+                size={20}
+                solid
+              />
+            )
+          case 'games':
+            return (
+              <FontIcon
+                name="gamepad"
+                color={focused ? colors.lightPurple : colors.gray}
+                size={20}
+                solid
+              />
+            )
+          case 'orders':
+            return (
+              <FontIcon
+                name="cash-register"
                 color={focused ? colors.lightPurple : colors.gray}
                 size={20}
                 solid
@@ -54,7 +80,7 @@ const TabNavigator = createBottomTabNavigator(
           // backgroundColor: 'white',
           // borderTopColor: 'gray',
           // borderTopWidth: 1,
-          // paddingBottom: 5,
+          paddingBottom: 2,
           // paddingTop: 5,
         },
       },
