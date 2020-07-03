@@ -3,10 +3,13 @@ import { createStackNavigator } from 'react-navigation-stack'
 import { colors } from 'theme'
 import Home from 'scenes/home'
 import Profile from 'scenes/profile'
+import StartParty from 'scenes/startParty'
 import Details from 'scenes/details'
 import HeaderLeft from './HeaderLeft'
 import HeaderTitle from './HeaderTitle'
 import Wallet from 'scenes/wallet'
+import SwitchPoints from 'scenes/switchPoints'
+import BuyAtBar from 'scenes/buyAtBar'
 
 const navigationProps = {
   headerTintColor: 'white',
@@ -25,13 +28,6 @@ export const HomeNavigator = createStackNavigator({
       ...navigationProps,
     }),
   },
-  Details: {
-    screen: Details,
-    navigationOptions: () => ({
-      title: 'Details',
-      ...navigationProps,
-    }),
-  },
   Wallet: {
     screen: Wallet,
     navigationOptions: () => ({
@@ -39,6 +35,35 @@ export const HomeNavigator = createStackNavigator({
       ...navigationProps,
     }),
   },
+  // Zé Delivery (fazer Deep Link)
+  Details: {
+    screen: Details,
+    navigationOptions: () => ({
+      title: 'Details',
+      ...navigationProps,
+    }),
+  },
+  StartParty: {
+    screen: StartParty,
+    navigationOptions: () => ({
+      title: 'StartParty',
+      ...navigationProps,
+    })
+  },
+  SwitchPoints: {
+    screen: SwitchPoints,
+    navigationOptions: () => ({
+      title: 'SwitchPoints',
+      ...navigationProps,
+    })
+  },
+  BuyAtBar: {
+    screen: BuyAtBar,
+    navigationOptions: () => ({
+      title: 'BuyAtBar',
+      ...navigationProps
+    })
+  }
 })
 
 
@@ -59,4 +84,8 @@ export const ProfileNavigator = createStackNavigator({
       ...navigationProps,
     }),
   },
+})
+
+export const Wallet = createStackNavigator({
+  
 })
