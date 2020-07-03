@@ -33,4 +33,5 @@ HeaderLeft.defaultProps = {
   navigation: { dispatch: () => null },
 }
 
+
 export default HeaderLeft

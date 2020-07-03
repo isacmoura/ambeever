@@ -25,7 +25,6 @@ const App = () => {
     handleLoadAssets()
   }, [])
 
-  // rendering
   if (!didLoad) return <View />
   return (
     <Provider store={store}>

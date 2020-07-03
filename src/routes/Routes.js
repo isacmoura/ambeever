@@ -6,13 +6,10 @@ import Connector from 'utils/connector'
 // navigation
 import Main from './navigation'
 
-const Routes = ({ actions, checked, loggedIn }) => {
+const Routes = ({ actions, checked }) => {
   useEffect(() => {
     actions.authenticate()
   }, [])
-
-  // TODO: switch router by loggedIn state
-  console.log('[##] loggedIn', loggedIn)
 
   // rendering
   if (!checked) return <Text>Loading...</Text>

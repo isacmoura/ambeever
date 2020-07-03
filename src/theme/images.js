@@ -14,6 +14,7 @@ export const images = {
   persona: require('../../assets/images/persona.jpeg'),
   star: require('../../assets/images/star.png'),
   wallet: require('../../assets/images/wallet.png'),
+  arrow_right: require('../../assets/images/arrow-right.png'),
 }
 
 // image preloading

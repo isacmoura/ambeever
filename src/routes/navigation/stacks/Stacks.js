@@ -6,11 +6,13 @@ import Profile from 'scenes/profile'
 import Details from 'scenes/details'
 import HeaderLeft from './HeaderLeft'
 import HeaderTitle from './HeaderTitle'
+import Wallet from 'scenes/wallet'
 
 const navigationProps = {
   headerTintColor: 'white',
-  headerStyle: { backgroundColor: colors.white },
+  headerStyle: { backgroundColor: colors.white, elevation: 0 },
   headerTitleStyle: { fontSize: 18 },
+  elevation: 0
 }
 
 export const HomeNavigator = createStackNavigator({
@@ -30,7 +32,15 @@ export const HomeNavigator = createStackNavigator({
       ...navigationProps,
     }),
   },
+  Wallet: {
+    screen: Wallet,
+    navigationOptions: () => ({
+      title: 'Wallet',
+      ...navigationProps,
+    }),
+  },
 })
+
 
 export const ProfileNavigator = createStackNavigator({
   Profile: {
