@@ -11,6 +11,7 @@ const colors = {
   lightGrayPurple: '#f7f7fb',
   pink: '#ff3d69',
   gray: '#797777',
+  lightYellow: '#FFC60B'
 }
 
 export default colors;
