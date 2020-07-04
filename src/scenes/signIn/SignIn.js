@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import {
   StyleSheet, Text, View, StatusBar,
 } from 'react-native'
-import Button from 'components/Button'
 import { colors } from 'theme'
 
 const styles = StyleSheet.create({
@@ -20,27 +19,18 @@ const styles = StyleSheet.create({
   },
 })
 
-const Profile = ({ navigation }) => (
+const SignIn = ({ navigation }) => (
   <View style={styles.root}>
     <StatusBar barStyle="light-content" />
-    <Text style={styles.title}>Profile</Text>
-    <Button
-      title="Go to Details"
-      color="white"
-      backgroundColor={colors.lightPurple}
-      onPress={() => {
-        navigation.navigate('Details', { from: 'Profile' })
-      }}
-    />
   </View>
 )
 
-Profile.propTypes = {
+SignIn.propTypes = {
   navigation: PropTypes.shape({ navigate: PropTypes.func }),
 }
 
-Profile.defaultProps = {
+SignIn.defaultProps = {
   navigation: { navigate: () => null },
 }
 
-export default Profile
+export default SignIn

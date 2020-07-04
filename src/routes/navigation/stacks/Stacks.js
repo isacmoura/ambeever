@@ -10,6 +10,13 @@ import HeaderTitle from './HeaderTitle'
 import Wallet from 'scenes/wallet'
 import SwitchPoints from 'scenes/switchPoints'
 import BuyAtBar from 'scenes/buyAtBar'
+import ValidatePoints from 'scenes/validatePoints'
+import PaymentMethods from 'scenes/paymentMethods/PaymentMethods'
+import SignIn from 'scenes/signIn/SignIn'
+import SignUp from 'scenes/signUp/SignUp'
+import StartCall from 'scenes/startCall'
+import GameRoom from '../../../scenes/gameRoom/GameRoom'
+import ChooseDrink from '../../../scenes/chooseDrink'
 
 const navigationProps = {
   headerTintColor: 'white',
@@ -50,13 +57,6 @@ export const HomeNavigator = createStackNavigator({
       ...navigationProps,
     })
   },
-  SwitchPoints: {
-    screen: SwitchPoints,
-    navigationOptions: () => ({
-      title: 'SwitchPoints',
-      ...navigationProps,
-    })
-  },
   BuyAtBar: {
     screen: BuyAtBar,
     navigationOptions: () => ({
@@ -66,6 +66,91 @@ export const HomeNavigator = createStackNavigator({
   }
 })
 
+export const WalletNavigator = createStackNavigator({
+  ValidatePoints: {
+    screen: ValidatePoints,
+    navigationOptions: () => ({
+      title: 'ValidatePoints',
+      ...navigationProps
+    })
+  },
+  PaymentMethods: {
+    screen: PaymentMethods,
+    navigationOptions: () => ({
+      title: 'PaymentMethods',
+      ...navigationProps
+    })
+  },
+  SwitchPoints: {
+    screen: SwitchPoints,
+    navigationOptions: () => ({
+      title: 'SwitchPoints',
+      ...navigationProps,
+    })
+  },
+})
+
+export const SignUpNavigator = createStackNavigator({
+  Home: {
+    screen: Home,
+    navigationOptions: ({ navigation }) => ({
+      title: 'Home',
+      headerLeft: <HeaderLeft navigation={navigation} />,
+      headerTitle: <HeaderTitle />,
+      ...navigationProps,
+    }),
+  },
+  SignIn: {
+    screen: SignIn,
+    navigationOptions: () => ({
+      title: 'SignIn',
+      ...navigationProps
+    })
+  }
+})
+
+export const SignInNavigator = createStackNavigator({
+  Home: {
+    screen: Home,
+    navigationOptions: ({ navigation }) => ({
+      title: 'Home',
+      headerLeft: <HeaderLeft navigation={navigation} />,
+      headerTitle: <HeaderTitle />,
+      ...navigationProps,
+    }),
+  },
+  SignUp: {
+    screen: SignUp,
+    navigationOptions: () => ({
+      title: 'SignIn',
+      ...navigationProps
+    })
+  }
+})
+
+export const StartPartyNavigator = createStackNavigator({
+  StartCall: {
+    screen: StartCall,
+    navigationOptions: () => ({
+      title: 'StartCall',
+      ...navigationProps
+    })
+  },
+  GameRoom: {
+    screen: GameRoom,
+    navigationOptions: () => ({
+      title: 'GameRoom',
+      ...navigationProps
+    })
+  },
+  ChooseDrink: {
+    screen: ChooseDrink,
+    navigationOptions: () => ({
+      title: 'ChooseDrink',
+      ...navigationProps
+    })
+  }
+})
 
 export const ProfileNavigator = createStackNavigator({
   Profile: {
@@ -84,8 +169,4 @@ export const ProfileNavigator = createStackNavigator({
       ...navigationProps,
     }),
   },
-})
-
-export const Wallet = createStackNavigator({
-  
 })
