@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native'
-import { images } from 'theme'
+import { View, StyleSheet, Image, Text } from 'react-native'
+import { images } from '../../../theme/images'
 import { fonts, colors } from '../../../theme'
 
 const styles = StyleSheet.create({
