@@ -25,8 +25,27 @@ const navigationProps = {
   headerTintColor: 'white',
   headerStyle: { backgroundColor: colors.white, elevation: 0 },
   headerTitleStyle: { fontSize: 18 },
-  elevation: 0
+  elevation: 0,
 }
+
+export const SignInNavigator = createStackNavigator({
+  Home: {
+    screen: Home,
+    navigationOptions: ({ navigation }) => ({
+      title: 'Home',
+      headerLeft: <HeaderLeft navigation={navigation} />,
+      headerTitle: <HeaderTitle />,
+      ...navigationProps,
+    }),
+  },
+  SignUp: {
+    screen: SignUp,
+    navigationOptions: () => ({
+      title: 'SignIn',
+      ...navigationProps
+    })
+  }
+})
 
 export const HomeNavigator = createStackNavigator({
   Home: {
@@ -104,25 +123,6 @@ export const SignUpNavigator = createStackNavigator({
   },
   SignIn: {
     screen: SignIn,
-    navigationOptions: () => ({
-      title: 'SignIn',
-      ...navigationProps
-    })
-  }
-})
-
-export const SignInNavigator = createStackNavigator({
-  Home: {
-    screen: Home,
-    navigationOptions: ({ navigation }) => ({
-      title: 'Home',
-      headerLeft: <HeaderLeft navigation={navigation} />,
-      headerTitle: <HeaderTitle />,
-      ...navigationProps,
-    }),
-  },
-  SignUp: {
-    screen: SignUp,
     navigationOptions: () => ({
       title: 'SignIn',
       ...navigationProps

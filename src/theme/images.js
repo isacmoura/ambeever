@@ -13,6 +13,7 @@ export const images = {
   star: require('../../assets/images/star.png'),
   wallet: require('../../assets/images/wallet.png'),
   arrow_right: require('../../assets/images/arrow-right.png'),
+  logo: require('../../assets/images/logo-big.png'),
 }
 
 // image preloading
