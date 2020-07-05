@@ -1,6 +1,5 @@
 import React from 'react'
 import { createStackNavigator } from 'react-navigation-stack'
-import { colors } from 'theme'
 import Home from 'scenes/home'
 import Profile from 'scenes/profile'
 import StartParty from 'scenes/startParty'
@@ -11,12 +10,15 @@ import Wallet from 'scenes/wallet'
 import SwitchPoints from 'scenes/switchPoints'
 import BuyAtBar from 'scenes/buyAtBar'
 import ValidatePoints from 'scenes/validatePoints'
-import PaymentMethods from 'scenes/paymentMethods/PaymentMethods'
+import PaymentMethods from 'scenes/paymentMethods'
+import SignIn from 'scenes/signIn/SignIn'
 import SignUp from 'scenes/signUp/SignUp'
 import StartCall from 'scenes/startCall'
-import GameRoom from '../../../scenes/gameRoom/GameRoom'
-import ChooseDrink from '../../../scenes/chooseDrink'
-import SignIn from '../../../scenes/signIn/SignIn'
+import GameRoom from 'scenes/gameRoom'
+import ChooseDrink from 'scenes/chooseDrink'
+import Delivery from 'scenes/delivery'
+import SelectionPage from 'scenes/'
+import Checkout from '../../../scenes/checkout/Checkout'
 
 const navigationProps = {
   headerTintColor: 'white',
@@ -42,11 +44,10 @@ export const HomeNavigator = createStackNavigator({
       ...navigationProps,
     }),
   },
-  // Zé Delivery (fazer Deep Link)
-  Details: {
-    screen: Details,
+  Delivery: {
+    screen: Delivery,
     navigationOptions: () => ({
-      title: 'Details',
+      title: 'Delivery',
       ...navigationProps,
     }),
   },
@@ -147,6 +148,36 @@ export const StartPartyNavigator = createStackNavigator({
     screen: ChooseDrink,
     navigationOptions: () => ({
       title: 'ChooseDrink',
+      ...navigationProps
+    })
+  }
+})
+
+export const DeliveryNavigator = createStackNavigator({
+  SelectionPage: {
+    screen: SelectionPage,
+    navigationOptions: () => ({
+      title: 'SelectionPage',
+      ...navigationProps
+    })
+  }
+})
+
+export const SelectionPageNavigator = createStackNavigator({
+  Checkout: {
+    screen: Checkout,
+    navigationOptions: () => ({
+      title: 'Checkout',
+      ...navigationProps
+    })
+  }
+})
+
+export const CheckoutNavigator = createStackNavigator({
+  Orders: {
+    screen: Orders,
+    navigationOptions: () => ({
+      title: 'Orders',
       ...navigationProps
     })
   }
