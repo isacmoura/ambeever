@@ -1,7 +1,8 @@
 import styled from 'styled-components/native'
 import colors from '../../../theme/colors'
+import { TouchableOpacity } from 'react-native'
 
-export const ContainerBox = styled.View`
+export const ContainerBox = styled(TouchableOpacity)`
   margin: 10px;
   width: 145px;
   height: 100px;
@@ -10,4 +11,6 @@ export const ContainerBox = styled.View`
   align-content: center;
   align-items: center;
   border-radius: 20px;
+  background-color: ${({ backgroundColor }) =>
+    backgroundColor ? backgroundColor : colors.white};
 `

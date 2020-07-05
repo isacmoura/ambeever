@@ -2,12 +2,19 @@ import React from 'react'
 import * as S from './styled'
 import Icon from '../Icon/Icon'
 
-const Button = ({ title, iconName, iconRight, children, ...props }) => (
-  <S.Button title={title} {...props}>
-    {!iconRight && <Icon iconName="haha" />}
+const Button = ({
+  title,
+  iconPath,
+  onPress,
+  iconRight,
+  children,
+  ...props
+}) => (
+  <S.Button title={title} onPress={onPress} {...props}>
+    {!iconRight && <Icon iconPath={iconPath} />}
     <S.Text>{title}</S.Text>
     {children}
-    {iconRight && <Icon iconName="haha" />}
+    {iconRight && <Icon iconPath={iconPath} />}
   </S.Button>
 )
 

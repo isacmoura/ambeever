@@ -6,19 +6,15 @@ import {
   View,
   StatusBar,
   TouchableOpacity,
-  Image,
 } from 'react-native'
 import { images } from 'theme'
 import { colors } from 'theme'
-import BoxRadius from '../../components/commom/BoxRadius/BoxRadius'
-import BoxImage from '../../components/commom/BoxImage/BoxImage'
-import CardImage from '../../components/commom/Card/Card'
 import { Input } from '../../components/commom/Input/Input'
-import ImageCircle from '../../components/commom/ImageCircle/ImageCircle'
-
-import image from '../../../assets/images/arrow-right.png'
-import persona from '../../../assets/images/persona.jpeg'
-import Button from '../../components/commom/Button/Button'
+import { Image, RowClickableContainer } from '../../components/commom/styled'
+// import CardProduct from '../../components/CardProduct/CardProduct'
+import ClickableImage from '../../components/commom/clickableImage/ClickableImage'
+import CardProduct from '../../components/CardProduct/CardProduct'
+import Button  from '../../components/commom/Button/Button'
 
 const styles = StyleSheet.create({
   root: {
@@ -52,18 +48,28 @@ const Home = ({ navigation }) => (
         <Image source={images.arrow_right} style={styles.arrowRight} />
       </TouchableOpacity>
     </View>
+    <Input
+      placeholder="Convide seus amigos e ganhe pontos!"
+      iconRight
+      // iconPath={require('../../../assets/images/add-friend.png')}
+    />
 
-    
-    <BoxRadius>
-      <Text>opaaa</Text>
-    </BoxRadius>
-    <ImageCircle source={persona} width={50} height={50} />
-    <BoxImage imagePath={image} label="teste" />
+    <RowClickableContainer>
+      <ClickableImage
+        imagePath={require('../../../assets/images/clickables/consumir-bar.png')}
+      />
+      <ClickableImage
+        imagePath={require('../../../assets/images/clickables/comecar-festa.png')}
+      />
+    </RowClickableContainer>
+    <Button title="Acessar" iconPath={require('../../../assets/images/arrow-right.png')} iconRight />
 
-    <Input placeholder="insira o usuario" iconName="oian"/>
-    
-    <Button title="acessar"/>
-    <Button title="acessar" iconRight/>
+    <Text>Promoções especiais</Text>
+    <CardProduct
+      imagePath={require('../../../assets/images/persona.jpeg')}
+      price="R$ 2.56"
+      description="Skol 350ml"
+    />
   </View>
 )
 

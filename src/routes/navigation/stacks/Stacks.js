@@ -12,11 +12,11 @@ import SwitchPoints from 'scenes/switchPoints'
 import BuyAtBar from 'scenes/buyAtBar'
 import ValidatePoints from 'scenes/validatePoints'
 import PaymentMethods from 'scenes/paymentMethods/PaymentMethods'
-import SignIn from 'scenes/signIn/SignIn'
 import SignUp from 'scenes/signUp/SignUp'
 import StartCall from 'scenes/startCall'
 import GameRoom from '../../../scenes/gameRoom/GameRoom'
 import ChooseDrink from '../../../scenes/chooseDrink'
+import SignIn from '../../../scenes/signIn/SignIn'
 
 const navigationProps = {
   headerTintColor: 'white',
