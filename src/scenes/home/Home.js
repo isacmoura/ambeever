@@ -6,22 +6,21 @@ import {
   View,
   StatusBar,
   TouchableOpacity,
+  ScrollView,
 } from 'react-native'
 import { images } from 'theme'
 import { colors } from 'theme'
 import { Input } from '../../components/commom/Input/Input'
 import { Image, RowClickableContainer } from '../../components/commom/styled'
-// import CardProduct from '../../components/CardProduct/CardProduct'
 import ClickableImage from '../../components/commom/clickableImage/ClickableImage'
-import CardProduct from '../../components/CardProduct/CardProduct'
-import Button  from '../../components/commom/Button/Button'
+import * as S from '../../components/commom/styled'
+import HorizontalFlatList from '../../components/HorizontalFlatList/HorizontalFlatList'
 
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
     backgroundColor: colors.white,
+    marginHorizontal: 10,
   },
   title: {
     fontSize: 24,
@@ -51,25 +50,20 @@ const Home = ({ navigation }) => (
     <Input
       placeholder="Convide seus amigos e ganhe pontos!"
       iconRight
-      // iconPath={require('../../../assets/images/add-friend.png')}
+      iconPath={require('../../../assets/images/add-friend.png')}
     />
 
     <RowClickableContainer>
-      <ClickableImage
-        imagePath={require('../../../assets/images/clickables/consumir-bar.png')}
-      />
-      <ClickableImage
-        imagePath={require('../../../assets/images/clickables/comecar-festa.png')}
-      />
+      <ClickableImage imagePath={images.pedir_bebidas} />
+      <ClickableImage imagePath={images.comecar_festa} />
     </RowClickableContainer>
-    <Button title="Acessar" iconPath={require('../../../assets/images/arrow-right.png')} iconRight />
+    <RowClickableContainer>
+      <ClickableImage imagePath={images.trocar_prontos} />
+      <ClickableImage imagePath={images.consumir_bar} />
+    </RowClickableContainer>
 
-    <Text>Promoções especiais</Text>
-    <CardProduct
-      imagePath={require('../../../assets/images/persona.jpeg')}
-      price="R$ 2.56"
-      description="Skol 350ml"
-    />
+    <S.SectionTitle>Promoções especiais</S.SectionTitle>
+    <HorizontalFlatList />
   </View>
 )
 

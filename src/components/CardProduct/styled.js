@@ -5,8 +5,8 @@ import BoxRadius from '../commom/BoxRadius/BoxRadius'
 export const Image = styled.Image`
   background-color: transparent;
   padding: 10px;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 80px;
   align-items: flex-end;
   border-radius: 5px;
 `
@@ -22,7 +22,9 @@ export const touchableZone = styled.TouchableOpacity`
 
 export const Box = styled(BoxRadius)`
   padding: 0;
-  height: 120px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
+  padding: 10px;
   padding-top: 10px;
+  padding-bottom: 10px;
 `;
