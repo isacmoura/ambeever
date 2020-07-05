@@ -8,7 +8,8 @@ import { createAppContainer } from 'react-navigation'
 import Home from 'scenes/home'
 import HeaderLeft from './navigation/stacks/HeaderLeft'
 import HeaderTitle from './navigation/stacks/HeaderTitle'
-
+import Wallet from 'scenes/wallet'
+import SignUp from 'scenes/signUp/SignUp'
 
 // navigation
 import SignIn from '../scenes/signIn/SignIn'
@@ -20,7 +21,7 @@ const navigationProps = {
   elevation: 0,
 }
 
-const SignInNavigator = createStackNavigator({
+const AppNavigator = createStackNavigator({
   SignIn: {
     screen: SignIn,
     navigationOptions: () => ({
@@ -37,9 +38,23 @@ const SignInNavigator = createStackNavigator({
       ...navigationProps,
     }),
   },
+  SignUp: {
+    screen: SignUp,
+    navigationOptions: () => ({
+      title: 'SignUp',
+      ...navigationProps
+    })
+  },
+  Wallet: {
+    screen: Wallet,
+    navigationOptions: () => ({
+      title: 'Wallet',
+      ...navigationProps,
+    }),
+  },
 })
 
-const SignInNav = createAppContainer(SignInNavigator);
+const Navigator = createAppContainer(AppNavigator);
 
 const Routes = ({ actions, checked }) => {
   useEffect(() => {
@@ -48,7 +63,7 @@ const Routes = ({ actions, checked }) => {
 
   // rendering
   if (!checked) return <Text>Loading...</Text>
-  return <SignInNav/>
+  return <Navigator/>
 }
 
 Routes.propTypes = {

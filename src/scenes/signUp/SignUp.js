@@ -2,11 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Text, View, StatusBar } from 'react-native'
 
-
-
 const SignUp = ({ navigation }) => {
   return (
-    <View style={styles.root}>
+    <View>
       <StatusBar barStyle="light-content" />
     </View>
   )
