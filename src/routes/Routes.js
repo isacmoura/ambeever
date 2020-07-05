@@ -10,6 +10,7 @@ import HeaderLeft from './navigation/stacks/HeaderLeft'
 import HeaderTitle from './navigation/stacks/HeaderTitle'
 import Wallet from 'scenes/wallet'
 import SignUp from 'scenes/signUp/SignUp'
+import Delivery from 'scenes/delivery'
 
 // navigation
 import SignIn from '../scenes/signIn/SignIn'
@@ -49,6 +50,13 @@ const AppNavigator = createStackNavigator({
     screen: Wallet,
     navigationOptions: () => ({
       title: 'Wallet',
+      ...navigationProps,
+    }),
+  },
+  Delivery: {
+    screen: Delivery,
+    navigationOptions: () => ({
+      title: 'Delivery',
       ...navigationProps,
     }),
   },
