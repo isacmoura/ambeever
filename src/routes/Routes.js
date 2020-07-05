@@ -11,6 +11,18 @@ import HeaderTitle from './navigation/stacks/HeaderTitle'
 import Wallet from 'scenes/wallet'
 import SignUp from 'scenes/signUp/SignUp'
 import Delivery from 'scenes/delivery'
+import BuyAtBar from 'scenes/buyAtBar'
+import StartParty from 'scenes/startParty'
+import PaymentMethods from 'scenes/paymentMethods'
+import SwitchPoints from 'scenes/switchPoints'
+import ValidatePoints from 'scenes/validatePoints'
+import StartCall from 'scenes/startCall'
+import GameRoom from 'scenes/gameRoom'
+import ChooseDrink from 'scenes/chooseDrink'
+import SelectionPage from 'scenes/selectionPage'
+import Checkout from 'scenes/checkout'
+import Orders from 'scenes/orders'
+import Profile from 'scenes/profile'
 
 // navigation
 import SignIn from '../scenes/signIn/SignIn'
@@ -57,6 +69,92 @@ const AppNavigator = createStackNavigator({
     screen: Delivery,
     navigationOptions: () => ({
       title: 'Delivery',
+      ...navigationProps,
+    }),
+  },
+  StartParty: {
+    screen: StartParty,
+    navigationOptions: () => ({
+      title: 'StartParty',
+      ...navigationProps,
+    })
+  },
+  BuyAtBar: {
+    screen: BuyAtBar,
+    navigationOptions: () => ({
+      title: 'BuyAtBar',
+      ...navigationProps
+    })
+  },
+  ValidatePoints: {
+    screen: ValidatePoints,
+    navigationOptions: () => ({
+      title: 'ValidatePoints',
+      ...navigationProps
+    })
+  },
+  PaymentMethods: {
+    screen: PaymentMethods,
+    navigationOptions: () => ({
+      title: 'PaymentMethods',
+      ...navigationProps
+    })
+  },
+  SwitchPoints: {
+    screen: SwitchPoints,
+    navigationOptions: () => ({
+      title: 'SwitchPoints',
+      ...navigationProps,
+    })
+  },
+  StartCall: {
+    screen: StartCall,
+    navigationOptions: () => ({
+      title: 'StartCall',
+      ...navigationProps
+    })
+  },
+  GameRoom: {
+    screen: GameRoom,
+    navigationOptions: () => ({
+      title: 'GameRoom',
+      ...navigationProps
+    })
+  },
+  ChooseDrink: {
+    screen: ChooseDrink,
+    navigationOptions: () => ({
+      title: 'ChooseDrink',
+      ...navigationProps
+    })
+  },
+  SelectionPage: {
+    screen: SelectionPage,
+    navigationOptions: () => ({
+      title: 'SelectionPage',
+      ...navigationProps
+    })
+  },
+  Checkout: {
+    screen: Checkout,
+    navigationOptions: () => ({
+      title: 'Checkout',
+      ...navigationProps
+    })
+  },
+  Orders: {
+    screen: Orders,
+    navigationOptions: () => ({
+      title: 'Orders',
+      ...navigationProps
+    })
+  },
+  Profile: {
+    screen: Profile,
+    navigationOptions: ({ navigation }) => ({
+      title: 'Profile',
+      headerLeft: <HeaderLeft navigation={navigation} />,
+      headerTitle: <HeaderTitle />,
       ...navigationProps,
     }),
   },
