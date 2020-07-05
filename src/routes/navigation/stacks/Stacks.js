@@ -1,9 +1,9 @@
 import React from 'react'
 import { createStackNavigator } from 'react-navigation-stack'
+import { colors } from 'theme'
 import Home from 'scenes/home'
 import Profile from 'scenes/profile'
 import StartParty from 'scenes/startParty'
-import Details from 'scenes/details'
 import HeaderLeft from './HeaderLeft'
 import HeaderTitle from './HeaderTitle'
 import Wallet from 'scenes/wallet'
@@ -18,7 +18,8 @@ import GameRoom from 'scenes/gameRoom'
 import ChooseDrink from 'scenes/chooseDrink'
 import Delivery from 'scenes/delivery'
 import SelectionPage from 'scenes/selectionPage'
-import Checkout from 'scenes/checkout/Checkout'
+import Checkout from 'scenes/checkout'
+import Orders from 'scenes/orders'
 
 const navigationProps = {
   headerTintColor: 'white',
@@ -190,13 +191,6 @@ export const ProfileNavigator = createStackNavigator({
       title: 'Profile',
       headerLeft: <HeaderLeft navigation={navigation} />,
       headerTitle: <HeaderTitle />,
-      ...navigationProps,
-    }),
-  },
-  Details: {
-    screen: Details,
-    navigationOptions: () => ({
-      title: 'Details',
       ...navigationProps,
     }),
   },
