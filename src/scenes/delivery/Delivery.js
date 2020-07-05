@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import {
   StyleSheet, Text, View, StatusBar,
 } from 'react-native'
-import Button from 'components/Button'
 import { colors } from 'theme'
 
 const styles = StyleSheet.create({
@@ -20,17 +19,17 @@ const styles = StyleSheet.create({
   },
 })
 
-const Details = ({ navigation }) => {
+const Delivery = ({ navigation }) => {
   const { from } = navigation.state.params
   return (
     <View style={styles.root}>
       <StatusBar barStyle="light-content" />
-      <Text style={styles.title}>{`Details (from ${from})`}</Text>
+      <Text style={styles.title}>{`Delivery (from ${from})`}</Text>
     </View>
   )
 }
 
-Details.propTypes = {
+Delivery.propTypes = {
   navigation: PropTypes.shape({
     state: PropTypes.shape({
       params: PropTypes.shape({
@@ -41,7 +40,7 @@ Details.propTypes = {
   }),
 }
 
-Details.defaultProps = {
+Delivery.defaultProps = {
   navigation: {
     state: {
       params: {
@@ -52,4 +51,4 @@ Details.defaultProps = {
   },
 }
 
-export default Details
+export default Delivery

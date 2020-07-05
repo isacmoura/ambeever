@@ -2,15 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Text, View, StatusBar } from 'react-native'
 
-const SignUp = ({ navigation }) => {
+
+
+const SelectionPage = ({ navigation }) => {
   return (
-    <View>
+    <View style={styles.root}>
       <StatusBar barStyle="light-content" />
     </View>
   )
 }
 
-SignUp.propTypes = {
+SelectionPage.propTypes = {
   navigation: PropTypes.shape({
     state: PropTypes.shape({
       params: PropTypes.shape({
@@ -21,7 +23,7 @@ SignUp.propTypes = {
   }),
 }
 
-SignUp.defaultProps = {
+SelectionPage.defaultProps = {
   navigation: {
     state: {
       params: {
@@ -32,4 +34,4 @@ SignUp.defaultProps = {
   },
 }
 
-export default SignUp
+export default SelectionPage

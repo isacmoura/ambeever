@@ -4,26 +4,48 @@ import { colors } from 'theme'
 import Home from 'scenes/home'
 import Profile from 'scenes/profile'
 import StartParty from 'scenes/startParty'
-import Details from 'scenes/details'
 import HeaderLeft from './HeaderLeft'
 import HeaderTitle from './HeaderTitle'
 import Wallet from 'scenes/wallet'
 import SwitchPoints from 'scenes/switchPoints'
 import BuyAtBar from 'scenes/buyAtBar'
 import ValidatePoints from 'scenes/validatePoints'
-import PaymentMethods from 'scenes/paymentMethods/PaymentMethods'
+import PaymentMethods from 'scenes/paymentMethods'
+import SignIn from 'scenes/signIn/SignIn'
 import SignUp from 'scenes/signUp/SignUp'
 import StartCall from 'scenes/startCall'
-import GameRoom from '../../../scenes/gameRoom/GameRoom'
-import ChooseDrink from '../../../scenes/chooseDrink'
-import SignIn from '../../../scenes/signIn/SignIn'
+import GameRoom from 'scenes/gameRoom'
+import ChooseDrink from 'scenes/chooseDrink'
+import Delivery from 'scenes/delivery'
+import SelectionPage from 'scenes/selectionPage'
+import Checkout from 'scenes/checkout'
+import Orders from 'scenes/orders'
 
 const navigationProps = {
   headerTintColor: 'white',
   headerStyle: { backgroundColor: colors.white, elevation: 0 },
   headerTitleStyle: { fontSize: 18 },
-  elevation: 0
+  elevation: 0,
 }
+
+export const SignInNavigator = createStackNavigator({
+  Home: {
+    screen: Home,
+    navigationOptions: ({ navigation }) => ({
+      title: 'Home',
+      headerLeft: <HeaderLeft navigation={navigation} />,
+      headerTitle: <HeaderTitle />,
+      ...navigationProps,
+    }),
+  },
+  SignUp: {
+    screen: SignUp,
+    navigationOptions: () => ({
+      title: 'SignIn',
+      ...navigationProps
+    })
+  }
+})
 
 export const HomeNavigator = createStackNavigator({
   Home: {
@@ -42,11 +64,10 @@ export const HomeNavigator = createStackNavigator({
       ...navigationProps,
     }),
   },
-  // Zé Delivery (fazer Deep Link)
-  Details: {
-    screen: Details,
+  Delivery: {
+    screen: Delivery,
     navigationOptions: () => ({
-      title: 'Details',
+      title: 'Delivery',
       ...navigationProps,
     }),
   },
@@ -109,25 +130,6 @@ export const SignUpNavigator = createStackNavigator({
   }
 })
 
-export const SignInNavigator = createStackNavigator({
-  Home: {
-    screen: Home,
-    navigationOptions: ({ navigation }) => ({
-      title: 'Home',
-      headerLeft: <HeaderLeft navigation={navigation} />,
-      headerTitle: <HeaderTitle />,
-      ...navigationProps,
-    }),
-  },
-  SignUp: {
-    screen: SignUp,
-    navigationOptions: () => ({
-      title: 'SignIn',
-      ...navigationProps
-    })
-  }
-})
-
 export const StartPartyNavigator = createStackNavigator({
   StartCall: {
     screen: StartCall,
@@ -152,6 +154,36 @@ export const StartPartyNavigator = createStackNavigator({
   }
 })
 
+export const DeliveryNavigator = createStackNavigator({
+  SelectionPage: {
+    screen: SelectionPage,
+    navigationOptions: () => ({
+      title: 'SelectionPage',
+      ...navigationProps
+    })
+  }
+})
+
+export const SelectionPageNavigator = createStackNavigator({
+  Checkout: {
+    screen: Checkout,
+    navigationOptions: () => ({
+      title: 'Checkout',
+      ...navigationProps
+    })
+  }
+})
+
+export const CheckoutNavigator = createStackNavigator({
+  Orders: {
+    screen: Orders,
+    navigationOptions: () => ({
+      title: 'Orders',
+      ...navigationProps
+    })
+  }
+})
+
 export const ProfileNavigator = createStackNavigator({
   Profile: {
     screen: Profile,
@@ -159,13 +191,6 @@ export const ProfileNavigator = createStackNavigator({
       title: 'Profile',
       headerLeft: <HeaderLeft navigation={navigation} />,
       headerTitle: <HeaderTitle />,
-      ...navigationProps,
-    }),
-  },
-  Details: {
-    screen: Details,
-    navigationOptions: () => ({
-      title: 'Details',
       ...navigationProps,
     }),
   },

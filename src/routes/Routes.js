@@ -2,9 +2,59 @@ import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Text } from 'react-native'
 import Connector from 'utils/connector'
+import { colors, images } from 'theme'
+import { createStackNavigator } from 'react-navigation-stack'
+import { createAppContainer } from 'react-navigation'
+import Home from 'scenes/home'
+import HeaderLeft from './navigation/stacks/HeaderLeft'
+import HeaderTitle from './navigation/stacks/HeaderTitle'
+import Wallet from 'scenes/wallet'
+import SignUp from 'scenes/signUp/SignUp'
 
 // navigation
-import Main from './navigation'
+import SignIn from '../scenes/signIn/SignIn'
+
+const navigationProps = {
+  headerTintColor: 'white',
+  headerStyle: { backgroundColor: colors.white, elevation: 0 },
+  headerTitleStyle: { fontSize: 18 },
+  elevation: 0,
+}
+
+const AppNavigator = createStackNavigator({
+  SignIn: {
+    screen: SignIn,
+    navigationOptions: () => ({
+      title: 'SignIn',
+      ...navigationProps
+    })
+  },
+  Home: {
+    screen: Home,
+    navigationOptions: ({ navigation }) => ({
+      title: 'Home',
+      headerLeft: <HeaderLeft navigation={navigation} />,
+      headerTitle: <HeaderTitle />,
+      ...navigationProps,
+    }),
+  },
+  SignUp: {
+    screen: SignUp,
+    navigationOptions: () => ({
+      title: 'SignUp',
+      ...navigationProps
+    })
+  },
+  Wallet: {
+    screen: Wallet,
+    navigationOptions: () => ({
+      title: 'Wallet',
+      ...navigationProps,
+    }),
+  },
+})
+
+const Navigator = createAppContainer(AppNavigator);
 
 const Routes = ({ actions, checked }) => {
   useEffect(() => {
@@ -13,7 +63,7 @@ const Routes = ({ actions, checked }) => {
 
   // rendering
   if (!checked) return <Text>Loading...</Text>
-  return <Main />
+  return <Navigator/>
 }
 
 Routes.propTypes = {
