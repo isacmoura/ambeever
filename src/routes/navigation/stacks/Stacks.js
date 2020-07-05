@@ -17,8 +17,8 @@ import StartCall from 'scenes/startCall'
 import GameRoom from 'scenes/gameRoom'
 import ChooseDrink from 'scenes/chooseDrink'
 import Delivery from 'scenes/delivery'
-import SelectionPage from 'scenes/'
-import Checkout from '../../../scenes/checkout/Checkout'
+import SelectionPage from 'scenes/selectionPage'
+import Checkout from 'scenes/checkout/Checkout'
 
 const navigationProps = {
   headerTintColor: 'white',
