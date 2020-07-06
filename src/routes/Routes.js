@@ -30,7 +30,7 @@ const navigationProps = {
   headerTintColor: '#000',
   // headerStyle: { backgroundColor: colors.white, elevation: 0 },
   headerTitleStyle: { fontSize: 18 },
-  elevation: 0
+  elevation: 0,
 }
 
 const AppNavigator = createStackNavigator({
@@ -38,8 +38,8 @@ const AppNavigator = createStackNavigator({
     screen: SignIn,
     navigationOptions: () => ({
       title: 'SignIn',
-      ...navigationProps
-    })
+      ...navigationProps,
+    }),
   },
   Home: {
     screen: Home,
@@ -54,14 +54,19 @@ const AppNavigator = createStackNavigator({
     screen: SignUp,
     navigationOptions: () => ({
       title: 'SignUp',
-      ...navigationProps
-    })
+      ...navigationProps,
+    }),
   },
   Wallet: {
     screen: Wallet,
     navigationOptions: ({ navigation }) => ({
       title: 'Wallet',
-      headerTitle: ()=> <HeaderPage title={navigation.state.routeName}  navigation={navigation}/>,
+      headerTitle: () => (
+        <HeaderPage
+          title={navigation.state.routeName}
+          navigation={navigation}
+        />
+      ),
       ...navigationProps,
     }),
   },
@@ -69,7 +74,12 @@ const AppNavigator = createStackNavigator({
     screen: Delivery,
     navigationOptions: ({ navigation }) => ({
       title: 'Delviery',
-      headerTitle: ()=> <HeaderPage title={navigation.state.routeName}  navigation={navigation}/>,
+      headerTitle: () => (
+        <HeaderPage
+          title={navigation.state.routeName}
+          navigation={navigation}
+        />
+      ),
       ...navigationProps,
     }),
   },
@@ -78,77 +88,83 @@ const AppNavigator = createStackNavigator({
     navigationOptions: ({ navigation }) => ({
       title: 'StartParty',
       ...navigationProps,
-    })
+    }),
   },
   BuyAtBar: {
     screen: BuyAtBar,
     navigationOptions: () => ({
       title: 'BuyAtBar',
-      ...navigationProps
-    })
+      ...navigationProps,
+    }),
   },
   ValidatePoints: {
     screen: ValidatePoints,
     navigationOptions: () => ({
       title: 'ValidatePoints',
-      ...navigationProps
-    })
+      ...navigationProps,
+    }),
   },
   PaymentMethods: {
     screen: PaymentMethods,
     navigationOptions: () => ({
       title: 'PaymentMethods',
-      ...navigationProps
-    })
+      ...navigationProps,
+    }),
   },
   SwitchPoints: {
     screen: SwitchPoints,
     navigationOptions: () => ({
       title: 'SwitchPoints',
       ...navigationProps,
-    })
+    }),
   },
   StartCall: {
     screen: StartCall,
     navigationOptions: () => ({
       title: 'StartCall',
-      ...navigationProps
-    })
+      ...navigationProps,
+    }),
   },
   GameRoom: {
     screen: GameRoom,
     navigationOptions: () => ({
       title: 'GameRoom',
-      ...navigationProps
-    })
+      ...navigationProps,
+    }),
   },
   ChooseDrink: {
     screen: ChooseDrink,
-    navigationOptions: () => ({
-      title: 'ChooseDrink',
-      ...navigationProps
-    })
+    navigationOptions: ({ navigation }) => ({
+      title: 'Detalhes',
+      headerTitle: () => (
+        <HeaderPage
+          title="Detalhes"
+          navigation={navigation}
+        />
+      ),
+      ...navigationProps,
+    }),
   },
   SelectionPage: {
     screen: SelectionPage,
     navigationOptions: () => ({
       title: 'SelectionPage',
-      ...navigationProps
-    })
+      ...navigationProps,
+    }),
   },
   Checkout: {
     screen: Checkout,
     navigationOptions: () => ({
       title: 'Checkout',
-      ...navigationProps
-    })
+      ...navigationProps,
+    }),
   },
   Orders: {
     screen: Orders,
     navigationOptions: () => ({
       title: 'Orders',
-      ...navigationProps
-    })
+      ...navigationProps,
+    }),
   },
   Profile: {
     screen: Profile,
@@ -161,7 +177,7 @@ const AppNavigator = createStackNavigator({
   },
 })
 
-const Navigator = createAppContainer(AppNavigator);
+const Navigator = createAppContainer(AppNavigator)
 
 const Routes = ({ actions, checked }) => {
   useEffect(() => {
@@ -170,7 +186,7 @@ const Routes = ({ actions, checked }) => {
 
   // rendering
   if (!checked) return <Text>Loading...</Text>
-  return <Navigator/>
+  return <Navigator />
 }
 
 Routes.propTypes = {

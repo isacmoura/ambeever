@@ -37,6 +37,13 @@ export const images = {
   video_chamada: require('../../assets/images/clickables/video-chamada.png'),
   share: require('../../assets/images/clickables/share.png'),
   whatsapp: require('../../assets/images/clickables/whatsapp.png'),
+  trocar_cupons: require('../../assets/images/clickables/cupons.png'),
+  trocar_produtos: require('../../assets/images/clickables/produtos.png'),
+  trocar_brindes: require('../../assets/images/clickables/brindes.png'),
+  detalhes: require('../../assets/images/clickables/detalhes.png'),
+  sacola_btn: require('../../assets/images/clickables/sacola-btn-1.png'),
+  checkout: require('../../assets/images/clickables/checkout.png'),
+  checkout_2: require('../../assets/images/clickables/checkout-2.png'),
 }
 
 // image preloading

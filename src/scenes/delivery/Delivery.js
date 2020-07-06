@@ -36,13 +36,14 @@ const Delivery = ({ navigation }) => {
         data={products}
         keyExtractor={(item) => item.description}
         renderItem={({ item }) => (
-          <S.CardContainer>
-            <CardProduct
-              imagePath={item.thumbnail}
-              price={item.price}
-              description={item.description}
-            />
-          </S.CardContainer>
+          <CardProduct
+            imagePath={item.thumbnail}
+            price={item.price}
+            description={item.description}
+            onPress={() =>
+              navigation.navigate('ChooseDrink', { from: 'Delivery' })
+            }
+          />
         )}
       />
     </ScrollView>
