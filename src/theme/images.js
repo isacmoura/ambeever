@@ -39,6 +39,7 @@ export const images = {
   sacola_btn: require('../../assets/images/clickables/sacola-btn-1.png'),
   checkout: require('../../assets/images/clickables/checkout.png'),
   checkout_2: require('../../assets/images/clickables/checkout-2.png'),
+  finalizado: require('../../assets/images/clickables/finalizado.png'),
 }
 
 // image preloading

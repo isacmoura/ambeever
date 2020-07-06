@@ -1,0 +1,32 @@
+import React from "react";
+import { Modal as ModalReact, StyleSheet, View } from "react-native";
+
+const Modal = ({ children, show, ...props }) => {
+  return (
+    <ModalReact
+      {...props}
+      animationType="slide"
+      transparent={true}
+      visible={show}
+      hardwareAccelerated={true}
+    >
+      <View onb>
+        {children}
+      </View>
+    </ModalReact>
+  );
+};
+
+const styles = StyleSheet.create({
+  modalView: {
+    backgroundColor: "#282828",
+    opacity: 1,
+    borderRadius: 10,
+    alignSelf: "center",
+    marginTop: "auto",
+    maxHeight: "80%",
+    marginBottom: "auto",
+  },
+});
+
+export default Modal;
