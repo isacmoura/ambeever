@@ -9,6 +9,7 @@ import Home from 'scenes/home'
 import HeaderLeft from './navigation/stacks/HeaderLeft'
 import HeaderTitle from './navigation/stacks/HeaderTitle'
 import Wallet from 'scenes/wallet'
+import SignIn from 'scenes/signIn'
 import SignUp from 'scenes/signUp/SignUp'
 import Delivery from 'scenes/delivery'
 import BuyAtBar from 'scenes/buyAtBar'
@@ -23,10 +24,6 @@ import SelectionPage from 'scenes/selectionPage'
 import Checkout from 'scenes/checkout'
 import Orders from 'scenes/orders'
 import Profile from 'scenes/profile'
-
-// navigation
-import SignIn from '../scenes/signIn/SignIn'
-import HeaderPage from '../components/commom/HeaderPage/HeaderPage'
 
 const navigationProps = {
   headerTintColor: '#000',

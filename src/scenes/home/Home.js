@@ -58,7 +58,7 @@ const Home = ({ navigation }) => (
       <ClickableImage imagePath={images.comecar_festa} />
     </RowClickableContainer>
     <RowClickableContainer>
-      <ClickableImage imagePath={images.trocar_prontos} />
+      <ClickableImage imagePath={images.trocar_prontos} onPress={() => navigation.navigate('Wallet', { from: 'Home' })} />
       <ClickableImage imagePath={images.consumir_bar} />
     </RowClickableContainer>
 
