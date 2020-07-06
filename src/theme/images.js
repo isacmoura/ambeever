@@ -30,6 +30,7 @@ export const images = {
   payment_forms: require('../../assets/images/clickables/payment-forms.png'),
   rescue_points: require('../../assets/images/clickables/rescue-points.png'),
   slider: require('../../assets/images/slider.png'),
+  search: require('../../assets/images/search.png'),
 }
 
 // image preloading
