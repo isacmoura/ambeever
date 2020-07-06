@@ -36,11 +36,12 @@ const Delivery = ({ navigation }) => {
         data={products}
         keyExtractor={(item) => item.description}
         renderItem={({ item }) => (
-          <S.CardContainer>
+          <S.CardContainer onPress={()=> navigation.navigate('Home', { from: 'Delivery' })}>
             <CardProduct
               imagePath={item.thumbnail}
               price={item.price}
               description={item.description}
+              onPress={()=> navigation.navigate('ChooseDrink', { from: 'Delivery' })}
             />
           </S.CardContainer>
         )}
