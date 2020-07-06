@@ -3,7 +3,11 @@
     "name": "ambeever",
     "slug": "ambeever",
     "privacy": "public",
-    "platforms": ["ios", "android", "web"],
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
@@ -15,13 +19,23 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
     "packagerOpts": {
       "config": "metro.config.js",
-      "sourceExts": ["js", "jsx", "svg", "ts", "tsx"]
-    }
+      "sourceExts": [
+        "js",
+        "jsx",
+        "svg",
+        "ts",
+        "tsx"
+      ]
+    },
+    "description": "Plataforma b2c que promove a conexão entre os consumidores e os bares. Com duas modalidades (online e presencial) o Ambeever possibilita pedir bebidas, interagir com quem você ama (por meio de jogos e vídeo chamada), além de facilitar sua ida ao bar, garantindo uma experiência com mais conforto e praticidade. Sem filas, sem estresse e se preferir, sem sair de casa. :)",
+    "githubUrl": "https://github.com/isacmoura/ambeever"
   }
 }
