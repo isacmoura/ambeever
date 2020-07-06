@@ -26,6 +26,7 @@ export const images = {
   skol: require('../../assets/images/bebidas/skol.png'),
   stella: require('../../assets/images/bebidas/stella.png'),
   logo: require('../../assets/images/logo-big.png'),
+  search: require('../../assets/images/search.png'),
 }
 
 // image preloading

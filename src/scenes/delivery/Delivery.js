@@ -1,43 +1,52 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import {
-  StyleSheet, Text, View, StatusBar,
-} from 'react-native'
-import { colors } from 'theme'
-
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: colors.lightGrayPurple,
-  },
-  title: {
-    fontSize: 24,
-    marginBottom: 20,
-  },
-})
+import { StatusBar, View } from 'react-native'
+import { RowClickableContainer } from '../../components/commom/styled'
+import ImageCircle from '../../components/commom/ImageCircle/ImageCircle'
+import { images } from '../../theme'
+import HeaderPage from '../../components/commom/HeaderPage/HeaderPage'
+import * as S from './styled'
+import { Input } from '../../components/commom/Input/Input'
+import { FlatList, ScrollView } from 'react-native-gesture-handler'
+import { products } from '../../utils/products'
+import CardProduct from '../../components/CardProduct/CardProduct'
 
 const Delivery = ({ navigation }) => {
   const { from } = navigation.state.params
   return (
-    <View style={styles.root}>
-      <StatusBar barStyle="light-content" />
-      <Text style={styles.title}>{`Delivery (from ${from})`}</Text>
-    </View>
-  )
-}
+    <ScrollView>
+      <S.HeaderContainer>
+        <ImageCircle source={images.persona} />
+        <RowClickableContainer>
+          <S.AddressContainer>
+            <HeaderPage title="Receber agora em" />
+            <S.address>R. São Paulo, 290</S.address>
+            <S.address>Itaquera, São Paulo</S.address>
+          </S.AddressContainer>
+        </RowClickableContainer>
+      </S.HeaderContainer>
 
-Delivery.propTypes = {
-  navigation: PropTypes.shape({
-    state: PropTypes.shape({
-      params: PropTypes.shape({
-        from: PropTypes.string,
-      }),
-    }),
-    goBack: PropTypes.func,
-  }),
+      <Input
+        iconPath={images.search}
+        placeholder="Pesquise sua bebida favorita"
+      />
+
+      <S.CustomFlatList
+        numColumns={3}
+        contentInset={{ right: 0, top: 0, left: 20, bottom: 0 }}
+        data={products}
+        keyExtractor={(item) => item.description}
+        renderItem={({ item }) => (
+          <S.CardContainer>
+            <CardProduct
+              imagePath={item.thumbnail}
+              price={item.price}
+              description={item.description}
+            />
+          </S.CardContainer>
+        )}
+      />
+    </ScrollView>
+  )
 }
 
 Delivery.defaultProps = {
