@@ -10,6 +10,7 @@ import { fontAssets } from 'theme/fonts'
 import Router from './routes'
 
 const App = () => {
+  console.disableYellowBox = true;
   // state
   const [didLoad, setDidLoad] = useState(false)
 
