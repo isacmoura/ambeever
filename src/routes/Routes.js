@@ -75,7 +75,7 @@ const AppNavigator = createStackNavigator({
   },
   StartParty: {
     screen: StartParty,
-    navigationOptions: () => ({
+    navigationOptions: ({ navigation }) => ({
       title: 'StartParty',
       ...navigationProps,
     })

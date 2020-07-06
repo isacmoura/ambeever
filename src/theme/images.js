@@ -32,9 +32,11 @@ export const images = {
   slider: require('../../assets/images/slider.png'),
   search: require('../../assets/images/search.png'),
   glass: require('../../assets/images/glass.png'),
-  trocar_cupons: require('../../assets/images/clickables/cupons.png'),
-  trocar_produtos: require('../../assets/images/clickables/produtos.png'),
-  trocar_brindes: require('../../assets/images/clickables/brindes.png'),
+  escolher_bebidas: require('../../assets/images/clickables/escolher-bebida.png'),
+  jogos: require('../../assets/images/clickables/jogos.png'),
+  video_chamada: require('../../assets/images/clickables/video-chamada.png'),
+  share: require('../../assets/images/clickables/share.png'),
+  whatsapp: require('../../assets/images/clickables/whatsapp.png'),
 }
 
 // image preloading

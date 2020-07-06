@@ -54,8 +54,8 @@ const Home = ({ navigation }) => (
     />
 
     <RowClickableContainer>
-      <ClickableImage imagePath={images.pedir_bebidas} onPress={()=> navigation.navigate('Delivery', { from: 'Home' })} />
-      <ClickableImage imagePath={images.comecar_festa} />
+      <ClickableImage imagePath={images.pedir_bebidas} onPress={() => navigation.navigate('Delivery', { from: 'Home' })} />
+      <ClickableImage imagePath={images.comecar_festa} onPress={() => navigation.navigate('StartParty', { from: 'Home' })}/>
     </RowClickableContainer>
     <RowClickableContainer>
       <ClickableImage imagePath={images.trocar_prontos} onPress={() => navigation.navigate('Wallet', { from: 'Home' })} />
