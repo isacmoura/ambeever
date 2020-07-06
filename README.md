@@ -14,3 +14,11 @@ Ambeever é uma plataforma b2c que promove a conexão entre os consumidores e os
 - Dentro do diretório do projeto, instale as dependências com `npm install`.
 - Então execute o comando `expo start`.
 - Seguindo o tutorial, abra o aplicativo do Expo em seu dispositivo móvel e escaneie o QR Code gerado no terminal ou na página Web que será aberta.
+
+# Tecnologias utilizadas
+- React Native
+- Expo
+- Styled Components
+- Redux
+- React Navigation
+- Flexbox
