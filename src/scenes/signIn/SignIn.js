@@ -12,7 +12,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: colors.lightGrayPurple,
   },
   logo: {
     height: 150,
@@ -25,7 +24,6 @@ const styles = StyleSheet.create({
 
 const SignIn = ({ navigation }) => (
   <View style={styles.root}>
-    <StatusBar barStyle="light-content" />
     <Icon iconPath={images.logo} style={styles.logo}/>
     <Input placeholder={"Email"}></Input>
     <Input placeholder={"Senha"}></Input>

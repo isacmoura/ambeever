@@ -26,6 +26,10 @@ export const images = {
   skol: require('../../assets/images/bebidas/skol.png'),
   stella: require('../../assets/images/bebidas/stella.png'),
   logo: require('../../assets/images/logo-big.png'),
+  upload: require('../../assets/images/upload.png'),
+  payment_forms: require('../../assets/images/clickables/payment-forms.png'),
+  rescue_points: require('../../assets/images/clickables/rescue-points.png'),
+  slider: require('../../assets/images/slider.png'),
 }
 
 // image preloading

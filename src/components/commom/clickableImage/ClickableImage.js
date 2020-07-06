@@ -3,7 +3,7 @@ import { RowClickableContainer } from '../styled'
 import * as S from './styled'
 const ClickableImage = ({ imagePath, ...props }) =>
   imagePath ? (
-    <RowClickableContainer>
+    <RowClickableContainer { ...props }>
       <S.Image source={imagePath} />
     </RowClickableContainer>
   ) : null
