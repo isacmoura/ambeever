@@ -24,6 +24,7 @@ import SelectionPage from 'scenes/selectionPage'
 import Checkout from 'scenes/checkout'
 import Orders from 'scenes/orders'
 import Profile from 'scenes/profile'
+import HeaderPage from '../components/commom/HeaderPage/HeaderPage'
 
 const navigationProps = {
   headerTintColor: '#000',
