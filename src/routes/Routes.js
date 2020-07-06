@@ -26,10 +26,10 @@ import Orders from 'scenes/orders'
 import Profile from 'scenes/profile'
 
 const navigationProps = {
-  headerTintColor: 'white',
-  headerStyle: { backgroundColor: colors.white, elevation: 0 },
+  headerTintColor: '#000',
+  // headerStyle: { backgroundColor: colors.white, elevation: 0 },
   headerTitleStyle: { fontSize: 18 },
-  elevation: 0,
+  elevation: 0
 }
 
 const AppNavigator = createStackNavigator({
@@ -58,15 +58,17 @@ const AppNavigator = createStackNavigator({
   },
   Wallet: {
     screen: Wallet,
-    navigationOptions: () => ({
+    navigationOptions: ({ navigation }) => ({
       title: 'Wallet',
+      headerTitle: ()=> <HeaderPage title={navigation.state.routeName}  navigation={navigation}/>,
       ...navigationProps,
     }),
   },
   Delivery: {
     screen: Delivery,
-    navigationOptions: () => ({
-      title: 'Delivery',
+    navigationOptions: ({ navigation }) => ({
+      title: 'Delviery',
+      headerTitle: ()=> <HeaderPage title={navigation.state.routeName}  navigation={navigation}/>,
       ...navigationProps,
     }),
   },
