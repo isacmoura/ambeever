@@ -31,6 +31,10 @@ export const images = {
   rescue_points: require('../../assets/images/clickables/rescue-points.png'),
   slider: require('../../assets/images/slider.png'),
   search: require('../../assets/images/search.png'),
+  glass: require('../../assets/images/glass.png'),
+  trocar_cupons: require('../../assets/images/clickables/cupons.png'),
+  trocar_produtos: require('../../assets/images/clickables/produtos.png'),
+  trocar_brindes: require('../../assets/images/clickables/brindes.png'),
 }
 
 // image preloading

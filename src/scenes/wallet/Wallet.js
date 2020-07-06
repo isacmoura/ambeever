@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import { StyleSheet, Text, View, StatusBar} from 'react-native'
 import { colors, fonts, images } from '../../theme'
 import HeaderPage from '../../components/commom/HeaderPage/HeaderPage'
-import { Image, RowClickableContainer } from '../../components/commom/styled'
-import ClickableImage from '../../components/commom/clickableImage/ClickableImage'
+import { Image } from '../../components/commom/styled'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const styles = StyleSheet.create({
