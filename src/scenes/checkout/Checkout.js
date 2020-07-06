@@ -1,9 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import {
-  StyleSheet, Text, View, StatusBar,
-} from 'react-native'
+import { StyleSheet, Text, View, StatusBar } from 'react-native'
 import { colors } from 'theme'
+import styled from 'styled-components/native'
+import Button from '../../components/commom/Button/Button'
+import { images } from '../../theme'
+import { ScrollView } from 'react-native-gesture-handler'
 
 const styles = StyleSheet.create({
   root: {
@@ -19,25 +20,28 @@ const styles = StyleSheet.create({
   },
 })
 
+const Img = styled.Image`
+  margin-bottom: 20px;
+`
+
 const Checkout = ({ navigation }) => {
   const { from } = navigation.state.params
   return (
-    <View style={styles.root}>
-      <StatusBar barStyle="light-content" />
-      <Text style={styles.title}>{`Checkout (from ${from})`}</Text>
-    </View>
-  )
-}
+    <ScrollView>
+      <View style={{ alignItems: 'center' }}>
+        <StatusBar barStyle="light-content" />
 
-Checkout.propTypes = {
-  navigation: PropTypes.shape({
-    state: PropTypes.shape({
-      params: PropTypes.shape({
-        from: PropTypes.string,
-      }),
-    }),
-    goBack: PropTypes.func,
-  }),
+        <Img source={images.checkout} />
+        <Img source={images.checkout_2} />
+        <Button
+          title="Finalizar Comrpa"
+          onPress={() =>
+            navigation.navigate('Checkout', { from: 'ChooseDrink' })
+          }
+        />
+      </View>
+    </ScrollView>
+  )
 }
 
 Checkout.defaultProps = {

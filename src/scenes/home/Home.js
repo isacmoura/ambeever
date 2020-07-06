@@ -63,7 +63,7 @@ const Home = ({ navigation }) => (
     </RowClickableContainer>
 
     <S.SectionTitle>Promoções especiais</S.SectionTitle>
-    <HorizontalFlatList />
+    <HorizontalFlatList navigation={navigation}/>
   </View>
 )
 

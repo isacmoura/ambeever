@@ -1,26 +1,30 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import styled from 'styled-components/native'
 import { Text, View, StatusBar } from 'react-native'
+import { images } from '../../theme'
+import {
+  ScrollView,
+  TouchableWithoutFeedback,
+} from 'react-native-gesture-handler'
+import Button from '../../components/commom/Button/Button'
 
-
+const Img = styled.Image`
+  margin-bottom: 20px;
+`
 
 const ChooseDrink = ({ navigation }) => {
   return (
-    <View style={styles.root}>
-      <StatusBar barStyle="light-content" />
-    </View>
-  )
-}
+    <ScrollView>
+      <View style={{alignItems: "center"}}>
+        <StatusBar barStyle="light-content" />
 
-ChooseDrink.propTypes = {
-  navigation: PropTypes.shape({
-    state: PropTypes.shape({
-      params: PropTypes.shape({
-        from: PropTypes.string,
-      }),
-    }),
-    goBack: PropTypes.func,
-  }),
+        <Img source={images.detalhes} />
+        <Img source={images.sacola_btn} />
+        <Button title="Sacola(1)      R$ 2,19"  onPress={() => navigation.navigate('Checkout', { from: 'ChooseDrink' })}/>
+        <Button title="Continuar Comprando" />
+      </View>
+    </ScrollView>
+  )
 }
 
 ChooseDrink.defaultProps = {
